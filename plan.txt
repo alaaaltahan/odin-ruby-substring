@@ -1,0 +1,13 @@
+understand the problem
+make sure how many time the words or part of the word show in dictionary
+
+plan 
+let make the code work for one word then make it for multiple words
+
+pseudocode
+-iterate over the dictionary
+- search in word of dictionary contain inn word
+-write a hash that contain each word and the number of exists 
+-solve the problem for multiple word
+divide and conquer 
+

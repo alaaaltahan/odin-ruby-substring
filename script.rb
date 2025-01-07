@@ -4,18 +4,14 @@ def substrings(str, dictionary)
   # turn string to array
   arr = str.split(' ')
   # iterate over the array
-  
-      dictionary.reduce(Hash.new(0)) do |result,dictionary_word|
-       arr.each do |string|
-        if string.include?(dictionary_word)
-          result[dictionary_word] += 1  
-         end
-       end 
-       
-     result
+
+  dictionary.each_with_object(Hash.new(0)) do |dictionary_word, result|
+    arr.each do |string|
+      result[dictionary_word] += 1 if string.include?(dictionary_word)
+    end
   end
 end
 
-solution = substrings("Howdy partner, sit down! How's it going?", dictionary)
+substrings("Howdy partner, sit down! How's it going?", dictionary)
 
 debugger
